@@ -5,9 +5,9 @@ apt-get install \
     tcl \
     --yes
 
-curl -O http://download.redis.io/redis-stable.tar.gz
-tar xzf redis-stable.tar.gz
-cd redis-stable
+curl -O https://download.redis.io/releases/redis-7.0.0.tar.gz
+tar xzf redis-7.0.0.tar.gz
+cd redis-7.0.0/redis-7.0.0
 make
 #make test
 make install
