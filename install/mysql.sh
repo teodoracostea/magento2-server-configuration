@@ -5,7 +5,7 @@ if [ $1 ] && [ $2 ];
         debconf-set-selections <<< "mysql-server mysql-server/root_password password $2"
         debconf-set-selections <<< "mysql-server mysql-server/root_password_again password $2"
 
-        apt-get install mysql-server --yes
+        apt-get install mysql-server=8.0 --yes
 
         service mysql start
 
