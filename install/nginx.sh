@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 apt-get install \
-    nginx \
+    nginx=1.22 \
     --yes
 
 service nginx restart
