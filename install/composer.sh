@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 
-curl -sS https://getcomposer.org/installer | php;
-mv composer.phar /usr/bin/composer
+sudo apt update
+curl -sS https://getcomposer.org/installer -o composer-setup.php
+sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer
