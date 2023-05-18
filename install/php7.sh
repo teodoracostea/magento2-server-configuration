@@ -7,7 +7,7 @@ apt-get install \
     php-curl \
     php-cli \
     php-gd \
-    php7.2-xsl \
+    php8.1-xsl \
     php-json \
     php-intl \
     php-pear \
@@ -16,8 +16,27 @@ apt-get install \
     php-soap \
     php-mbstring \
     php-zip \
-    php7.2-bcmath \
+    php8.1-bcmath \
     php-imagick \
+    bcmath \
+    php-ctype \
+    php-dom \
+    php-fileinfo \
+    php-filter \
+    php-hash \
+    php-iconv \
+    php-libxml \
+    php-openssl \
+    php-pcre \
+    php-pdo_mysql \
+    php-simplexml \
+    php-sockets \
+    php-sodium \
+    php-tokenizer \
+    php-xmlwriter \
+    php-xsl \
+    php-zlib \
+    lib-libxml \
     --yes
 
-service php7.2-fpm restart
+service php-fpm restart
