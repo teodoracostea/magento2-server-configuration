@@ -127,6 +127,30 @@ if [ $INSTALL_REDIS == "yes" ];
         bash install/redis.sh
 fi;
 
+if [ $INSTALL_OPENSEARCH == "yes" ];
+    then
+        echo ""
+        echo "INSTALLATION: OPENSEARCH"
+        sleep $WAIT
+        bash install/opensearch.sh
+fi;
+
+if [ $INSTALL_RABBITMQ == "yes" ];
+    then
+        echo ""
+        echo "INSTALLATION: RABBITMQ"
+        sleep $WAIT
+        bash install/rabbitmq.sh
+fi;
+
+if [ $INSTALL_VARNISH == "yes" ];
+    then
+        echo ""
+        echo "INSTALLATION: VARNISH"
+        sleep $WAIT
+        bash install/varnish.sh
+fi;
+
 if [ $SWAPING_SETTINGS == "yes" ];
     then
         echo ""
