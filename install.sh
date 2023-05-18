@@ -90,9 +90,9 @@ fi;
 if [ $INSTALL_PHP == "yes" ];
     then
         echo ""
-        echo "INSTALLATION: FULL PHP 7"
+        echo "INSTALLATION: FULL PHP 8"
         sleep $WAIT
-        bash install/php7.sh
+        bash install/php8.sh
 fi;
 
 if [ $INSTALL_MAILER == "yes" ];
