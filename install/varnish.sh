@@ -2,13 +2,13 @@
 
 apt-get install \
      apt-transport-https \
-     --yes
+     --yes   
      
 curl https://repo.varnish-cache.org/GPG-key.txt | apt-key add -
-
 echo "deb https://repo.varnish-cache.org/ubuntu/ trusty varnish-7.1" \
      >> /etc/apt/sources.list.d/varnish-cache.list
-
+     
 apt-get update
+apt-get install varnish=7.1
 
-apt-get install varnish
+service varnish start
