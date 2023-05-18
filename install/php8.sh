@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+apt-get install php=8.1
 apt-get install \
     php-fpm \
     php-mysql \
