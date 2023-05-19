@@ -17,10 +17,15 @@ if [ $1 ] && [ $2 ] && [ $3 ] && [ $4 ];
         rm -rf /var/www/html/$2/webroot/.*
 
         cd /var/www/html/$2/webroot
-        chown -R :www-data .
-        find . -type d -exec chmod 770 {} \;
-        find . -type f -exec chmod 660 {} \;
+        find var generated vendor pub/static pub/media app/etc -type f -exec chmod g+w {} +
+        find var generated vendor pub/static pub/media app/etc -type d -exec chmod g+ws {} +
+        chown -R :www-data . # Ubuntu
         chmod u+x bin/magento
+
+#        chown -R :www-data .
+#        find . -type d -exec chmod 770 {} \;
+#        find . -type f -exec chmod 660 {} \;
+#        chmod u+x bin/magento
 
         SITE=/etc/nginx/sites-available/$2
         curl https://raw.githubusercontent.com/teodoracostea/magento2-server-configuration/master/config/nginx-site > $SITE
