@@ -1,42 +1,27 @@
 #!/usr/bin/env bash
-apt-get install php=8.1
+sudo apt update && sudo apt install -y software-properties-common
+#sudo add-apt-repository ppa:ondrej/php
+sudo apt update && sudo apt install -y php8.1
 apt-get install \
-    php-fpm \
-    php-mysql \
-    php-mcrypt \
-    php-curl \
-    php-cli \
-    php-gd \
+    php8.1-fpm \
+    php8.1-mysql \
+    php8.1-mcrypt \
+    php8.1-curl \
+    php8.1-cli \
+    php8.1-gd \
     php8.1-xsl \
-    php-json \
-    php-intl \
-    php-pear \
-    php-dev \
-    php-common \
-    php-soap \
-    php-mbstring \
-    php-zip \
+    php8.1-common \
+    php8.1-intl \
+    php8.1-dev \
+    php8.1-common \
+    php8.1-soap \
+    php8.1-mbstring \
+    php8.1-zip \
     php8.1-bcmath \
-    php-imagick \
-    bcmath \
-    php-ctype \
-    php-dom \
-    php-fileinfo \
-    php-filter \
-    php-hash \
-    php-iconv \
-    php-libxml \
-    php-openssl \
-    php-pcre \
-    php-pdo_mysql \
-    php-simplexml \
-    php-sockets \
-    php-sodium \
-    php-tokenizer \
-    php-xmlwriter \
-    php-xsl \
-    php-zlib \
-    lib-libxml \
+    php8.1-imagick \
+    php8.1-bcmath \
+    php8.1-xml \
+    php8.1-xsl \
     --yes
 
-service php-fpm restart
+sudo service php8.1-fpm restart
