@@ -10,17 +10,5 @@ deb-src https://packagecloud.io/varnishcache/varnish70/$ID/ $VERSION_CODENAME ma
 EOF
 
 sudo apt update
-sudo apt install varnish
-
-sudo cp /lib/systemd/system/varnish.service /etc/systemd/system/
-cat /etc/systemd/system/varnish.service
-
-echo "ExecStart=/usr/sbin/varnishd \
-	  -a :80 \
-	  -a localhost:8443,PROXY \
-	  -p feature=+http2 \
-	  -f /etc/varnish/default.vcl \
-	  -s malloc,2g" > /etc/systemd/system/varnish.service
-       
- sudo systemctl daemon-reload
- sudo systemctl start varnish
+sudo apt install varnish=7.1 
+sudo systemctl status varnish
