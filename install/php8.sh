@@ -5,7 +5,7 @@ sudo apt update && sudo apt install -y php8.1
 apt-get install \
     php8.1-fpm \
     php8.1-mysql \
-    php8.1-mcrypt \
+    mcrypt \
     php8.1-curl \
     php8.1-cli \
     php8.1-gd \
