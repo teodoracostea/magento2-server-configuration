@@ -5,7 +5,7 @@ upstream fastcgi_backend {
 server {
 
   listen 80;
-  server_name 20.0.137.42;
-  set $MAGE_ROOT /var/www/html/magento2;
-  include /var/www/html/20.0.137.42/webroot/nginx.conf.sample;
+  server_name 20.0.147.16;
+  set $MAGE_ROOT /var/www/html/20.0.147.16/webroot;
+  include /var/www/html/20.0.147.16/nginx.conf.sample;
 }
