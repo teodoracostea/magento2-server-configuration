@@ -40,4 +40,4 @@ sudo apt-get install -y erlang-base \
                         erlang-syntax-tools erlang-tftp erlang-tools erlang-xmerl
 
 ## Install rabbitmq-server and its dependencies
-sudo apt-get install rabbitmq-server -y --fix-missing
+sudo apt-get install rabbitmq-server=3.9 -y --fix-missing
